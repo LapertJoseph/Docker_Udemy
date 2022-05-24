@@ -21,3 +21,4 @@ CMD ["node", "server.js"]
 # docker run = run l'image dans un container pour pouvoir lancer l'application
 # docker run -p {PORT de notre choix :PORT définis dans l'app} <= Mandatory lors des dockers run sinon l'app est pas disponible
 # docker ps = permet de voir les process en cours  si on rajoute le flag '-a' permet de voir également les process cachés
+# docker stop {id} = Arrete le container de l'image
