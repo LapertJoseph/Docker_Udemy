@@ -4,11 +4,14 @@ FROM node
 # On définis un espace de travail et toutes les commande ou sous commandes seront dans cet espace de travail
 WORKDIR /app
 
-# On copie tout le code que j'ai en local avec le premier "." et tu le copie dans le seconde '.'
-COPY . /app
+# On copie tous le contenu du fichier package.json dans l'espace de travail qui s'apelle /app
+COPY package.json /app
 
 # Run la commande pour installer toutes les dépendances requises pour l'application.
 RUN npm install
+
+# On copie tout le code que j'ai en local avec le premier "." et tu le copie dans le seconde '.'
+COPY . /app
 
 # Besoin de lui dire de l'exposer sur un port pour lancer le container
 EXPOSE 80
